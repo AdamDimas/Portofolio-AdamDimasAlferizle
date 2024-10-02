@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,6 +10,9 @@
 
     <!-- Bootsrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- my css -->
     <link rel="stylesheet" href="style.css" />
@@ -66,13 +70,13 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>
               Halo, perkenalkan nama saya Adam Dimas Alferizle. Saya merupakan mahasiswa dari Bina Nusantara University yang berjurusan Computer Science. Banyak teori yang telah saya pelajari di jurusan ini, seperti Intelligent Systems,
               Database Technology, Interactive Multimedia, Software Engineering, dan Network Technology.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>
               Ada beberapa skill yang saya miliki, yaitu penggunaan HTML, CSS, JavaScript, C++, Python, Java, Laravel, Bootstrap, mySQL. Walaupun saya belum memiliki pengalaman bekerja tetapi saya ingin mengimplementasikan apa yang sudah
               saya pelajari ke dalam industri teknologi.
@@ -100,7 +104,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="1000">
               <img src="img/1.jpg" class="card-img-top" alt="Project 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -108,7 +112,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000">
               <img src="img/1.jpg" class="card-img-top" alt="Project 2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -116,7 +120,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-delay="400" data-aos-duration="1000">
               <img src="img/1.jpg" class="card-img-top" alt="Project 3" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -134,6 +138,72 @@
       </svg>
     </section>
     <!-- Akhir PRojects -->
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="row text-center mb-3">
+            <div class="col">
+              <h2>Gallery</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="">
+                <img src="img/1.jpg" alt="1" width="200" class="gallery-img" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Gallery -->
 
     <!-- Contact -->
     <section id="contact">
@@ -190,6 +260,27 @@
     </footer>
     <!-- Akhir Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+      gsap.from(".jumbotron img", { duraton: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbzHDiqXTyI3dbc24SR3wE86NC_aVFb_unLITUXH_8ey7DUTqN6RkWbPbvyszK-ctmorww/exec";
       const form = document.forms["contact-form"];
