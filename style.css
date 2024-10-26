@@ -1,20 +1,126 @@
-.jumbotron {
-  padding-top: 6rem;
-  background-color: #e2edff;
+body {
+	font-family: "Roboto", serif;
 }
 
-#projects {
-  background-color: #e2edff;
+.navbar {
+	background-color: #d9d9d9;
 }
 
+#home {
+	background-color: #d9d9d9;
+}
+#about {
+	background-color: #284b63;
+	color: white;
+}
+#skills {
+	background-color: #d9d9d9;
+}
+#project {
+	background-color: #284b63;
+	color: white;
+}
+#certificate {
+	background-color: #d9d9d9;
+}
+#contact {
+	background-color: #284b63;
+	color: white;
+}
+footer {
+	background-color: #d9d9d9;
+}
+
+.logo {
+	background: #284b63;
+}
 section {
-  padding-top: 6rem;
+	padding-top: 5rem;
 }
 
-.gallery-img {
-  width: 100%;
+.btn {
+	background: #3c6e71;
 }
 
-#gallery .row > *{
-  padding: 0;
+.education {
+	display: flex;
+	gap: 2rem;
+}
+.education .line {
+	padding: 0 0.7rem;
+}
+.education .line div {
+	width: 2px;
+	height: 100%;
+	background-color: #3c6e71;
+	position: relative;
+}
+.education-info p {
+	margin: 0.6rem 0 1.4rem;
+}
+.education-years {
+	margin-bottom: 3rem;
+}
+.education .line div:before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background: #3c6e71;
+	border-radius: 50%;
+	position: absolute;
+	left: -6px;
+}
+
+.right-content {
+	padding-right: 8rem;
+}
+.left-content {
+	padding-left: 8rem;
+}
+
+.project-card {
+	text-align: center;
+	/* border-radius: 10em 10em 10em 10em; */
+}
+/* .project-card img {
+	border-radius: 10em 10em 0 0;
+} */
+.project-card .card-body {
+	background-color: #d9d9d9;
+	border-color: #d9d9d9;
+}
+.project-card .btn {
+	background-color: #3c6e71;
+	border-color: #3c6e71;
+	padding: 0.75em;
+	border-radius: 0;
+}
+.project-card .btn:hover {
+	background-color: #6c757d;
+	border-color: #6c757d;
+}
+
+@media screen and (max-width: 1024px) {
+	.navbar {
+		background: transparent;
+		width: 25%;
+		margin-left: 1rem;
+	}
+	.navbar .container button {
+		background: #d9d9d9;
+	}
+	.collapse {
+		background: #d9d9d9;
+		margin-top: 1rem;
+		border-radius: 20px;
+		border: 1.5px solid black;
+	}
+
+	.right-content {
+		padding-right: 0;
+		margin-top: 2rem;
+	}
+	.left-content {
+		padding-left: 0;
+	}
 }
